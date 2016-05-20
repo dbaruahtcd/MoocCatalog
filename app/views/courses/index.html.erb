@@ -8,8 +8,12 @@
 	</tr>
 
 	<% @courses.each do |course| %>
-	<tr>
+	<tr class=<%= cycle('even', 'odd') %>>
+		
 		<td><%= image_tag(course["photoUrl"])%></td>
+		
+		<!-- <td><course[workload]></td> -->
+
 		<td><%= course["name"]%></td>
 		<td><%= course["description"]%></td>
 		

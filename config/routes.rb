@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   get 'courses/index'
 
-  get 'greeter/hello'
+  get 'greeter/hello' => "greeter#hello"
   get 'greeter/goodbye'
+
+  root 'courses#index' # the root is set to the courses folder
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
